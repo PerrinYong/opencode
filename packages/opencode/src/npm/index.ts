@@ -34,7 +34,6 @@ export namespace Npm {
     }
     return result
   }
-
   export async function outdated(pkg: string, cachedVersion: string): Promise<boolean> {
     const response = await fetch(`https://registry.npmjs.org/${pkg}`)
     if (!response.ok) {
